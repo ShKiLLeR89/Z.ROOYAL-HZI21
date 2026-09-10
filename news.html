@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخبار | HZI21 - سرور ماینکرفت فارسی</title>
+    <meta name="description" content="آخرین اخبار، اطلاعیه‌ها و رویدادهای سرور ماینکرفت HZI21">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { vazir: ['Vazirmatn', 'sans-serif'] },
+                    colors: {
+                        dark: '#0a0a0f',
+                        dark2: '#12121a',
+                        dark3: '#1a1a24',
+                        neon: '#00d4ff',
+                        purple: '#a855f7',
+                        gold: '#f5b50a',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        .glow {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-glow {
+            transition: all 0.3s ease;
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            transform: translateY(-4px);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
+            transform: scale(1.03);
+        }
+
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00d4ff, #a855f7);
+            border-radius: 5px;
+        }
+
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        #mobileMenu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white font-vazir overflow-x-hidden">
+
+    <!-- ================= هدر ================= -->
+    <header class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="https://cdn.imgurl.ir/uploads/w81599_IMG_20260910_125826_298.jpg" alt="HZI21 Logo"
+                    class="h-12 w-12 rounded-lg object-cover border-2 border-neon/40">
+                <span class="text-xl font-black gradient-text">HZI21</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-neon transition">خانه</a>
+                <a href="news.html" class="text-neon font-bold">اخبار</a>
+                <a href="trailers.html" class="hover:text-neon transition">تریلرها</a>
+                <a href="blog.html" class="hover:text-neon transition">وبلاگ</a>
+                <a href="shop.html" class="hover:text-neon transition">فروشگاه</a>
+            </nav>
+
+            <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
+                class="hidden md:block bg-gradient-to-r from-neon to-purple px-5 py-2 rounded-lg text-sm font-bold btn-glow">
+                ورود به تلگرام
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-3xl text-neon focus:outline-none">
+                <span id="menuIcon">☰</span>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden bg-dark2 border-t border-white/10">
+            <nav class="flex flex-col px-4 py-4 gap-3 text-sm font-medium">
+                <a href="index.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">🏠 خانه</a>
+                <a href="news.html" class="py-2 px-3 rounded-lg bg-neon/10 text-neon font-bold">📰 اخبار</a>
+                <a href="trailers.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">🎬 تریلرها</a>
+                <a href="blog.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">📝 وبلاگ</a>
+                <a href="shop.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">🛒 فروشگاه</a>
+                <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
+                    class="mt-2 bg-gradient-to-r from-neon to-purple px-5 py-3 rounded-lg text-center font-bold btn-glow">
+                    💬 ورود به تلگرام
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= هدر صفحه اخبار ================= -->
+    <section class="relative pt-32 pb-16 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-neon/10 via-transparent to-dark"></div>
+        <div class="absolute top-20 left-1/4 w-80 h-80 bg-neon/20 rounded-full blur-3xl pulse-slow"></div>
+        <div class="absolute top-40 right-1/4 w-80 h-80 bg-purple/20 rounded-full blur-3xl pulse-slow"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
+            <span class="inline-block bg-neon/10 border border-neon/30 text-neon px-4 py-1 rounded-full text-sm mb-4">
+                📰 اخبار و اطلاعیه‌ها
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mb-4">
+                آخرین <span class="gradient-text glow">اخبار</span> HZI21
+            </h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                هر چیزی که باید درباره سرور، آپدیت‌ها، رویدادها و اطلاعیه‌های مهم بدونی، اینجاست.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= فیلترها ================= -->
+    <section class="px-4 mb-12">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-3">
+            <button class="bg-gradient-to-r from-neon to-purple px-5 py-2 rounded-full text-sm font-bold">
+                همه
+            </button>
+            <button
+                class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">
+                📢 اطلاعیه
+            </button>
+            <button
+                class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">
+                🎮 رویداد
+            </button>
+            <button
+                class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">
+                🚀 آپدیت
+            </button>
+            <button
+                class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">
+                📚 آموزش
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= لیست اخبار ================= -->
+    <section class="px-4 pb-20">
+        <div class="max-w-7xl mx-auto space-y-8">
+
+            <!-- خبر ۱ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto">
+                        <img src="https://cdn.imgurl.ir/uploads/i85993_IMG_20260910_125826_376.jpg" alt="چرا سرور ما"
+                            class="w-full h-full object-cover">
+                        <span
+                            class="absolute top-4 right-4 bg-neon/90 text-dark px-4 py-1 rounded-full text-xs font-bold">
+                            معرفی
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۱۵</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-neon">
+                            چرا سرور ما رو انتخاب کنید؟
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            HZI21 فقط یه سرور ماینکرفت نیست؛ یه <span class="text-neon font-bold">شهر زنده</span> با
+                            اقتصاد واقعی،
+                            هتل لوکس، استادیوم و رویدادهای هیجان‌انگیزه. اینجا هر روز یه ماجرای جدیده و
+                            هر بلوکی که می‌ذاری، یه قدم به افسانه‌شدن نزدیک‌ترت می‌کنه.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            تیم ما با عشق و علاقه، سروری رو ساختن که همه چیز توش هست: از شهرسازی و تجارت گرفته
+                            تا مسابقات PvP و مینی‌گیم‌ها. اگه دنبال یه سرور حرفه‌ای و پایدار هستی، HZI21 بهترین انتخابه.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#اقتصاد</span>
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#شهرسازی</span>
+                            <span class="text-xs bg-gold/10 text-gold px-3 py-1 rounded-full">#رویداد</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- خبر ۲ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto md:order-2">
+                        <img src="https://cdn.imgurl.ir/uploads/i85993_IMG_20260910_125826_376.jpg"
+                            alt="چگونه وارد شویم" class="w-full h-full object-cover">
+                        <span
+                            class="absolute top-4 right-4 bg-gold/90 text-dark px-4 py-1 rounded-full text-xs font-bold">
+                            آموزش
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۱۲</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-gold">
+                            چگونه وارد سرور شویم؟
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            ورود به HZI21 خیلی ساده‌ست! فقط کافیه ماینکرفت رو باز کنی و IP سرور رو وارد کنی.
+                            بعد از ورود، یه منوی خوش‌آمدگویی ازت استقبال می‌کنه و می‌تونی ثبت‌نام کنی.
+                        </p>
+                        <div class="bg-dark border border-neon/30 rounded-xl p-4 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-400 text-sm">IP سرور:</span>
+                                <span class="font-mono text-neon font-bold text-lg">HZI21.aternos.me</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            بعد از ورود، با دستور <span
+                                class="font-mono text-neon bg-neon/10 px-2 py-1 rounded">/register</span>
+                            ثبت‌نام کن و رمز بذار. بعدش می‌تونی وارد شهر بشی، خونه بخری، شغل انتخاب کنی و
+                            ماجراجوییت رو شروع کنی!
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-gold/10 text-gold px-3 py-1 rounded-full">#آموزش</span>
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#شروع</span>
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#ثبت‌نام</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- خبر ۳ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto">
+                        <img src="https://cdn.imgurl.ir/uploads/g416905_IMG_20260910_125826_156.jpg"
+                            alt="کی سرور ران میشه" class="w-full h-full object-cover">
+                        <span
+                            class="absolute top-4 right-4 bg-purple/90 text-white px-4 py-1 rounded-full text-xs font-bold">
+                            اطلاعیه
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۱۰</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-purple">
+                            کی سرور ران می‌شه؟
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            سرور HZI21 به صورت <span class="text-purple font-bold">۲۴ ساعته</span> فعاله و
+                            همیشه در دسترسه. چه صبح زود، چه نصف شب، هر وقت که بخوای می‌تونی وارد بشی و بازی کنی.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            برای اطلاع از زمان‌بندی رویدادهای خاص، آپدیت‌ها و تعمیرات احتمالی، حتماً کانال
+                            تلگرام ما رو دنبال کن. هر اطلاعیه مهمی رو اول اونجا اعلام می‌کنیم.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#اطلاعیه</span>
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#۲۴ساعته</span>
+                        </div>
+                        <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
+                            class="inline-block bg-gradient-to-r from-neon to-purple px-6 py-2 rounded-lg text-sm font-bold btn-glow w-fit">
+                            📱 عضویت در کانال تلگرام
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- خبر ۴ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto md:order-2">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-neon/40 to-purple/40 flex items-center justify-center text-9xl">
+                            💰
+                        </div>
+                        <span
+                            class="absolute top-4 right-4 bg-neon/90 text-dark px-4 py-1 rounded-full text-xs font-bold">
+                            اقتصاد
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۰۸</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-neon">
+                            راهنمای اقتصاد و تجارت
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            سیستم اقتصادی HZI21 یکی از پیشرفته‌ترین سیستم‌های ماینکرفت فارسیه.
+                            می‌تونی مغازه بزنی، جنس بفروشی، سرمایه‌گذاری کنی و حتی بورس بازی کنی!
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            با پول درآوردن، می‌تونی زمین بخری، خونه بسازی، ماشین بخری و امپراتوری
+                            تجاری خودت رو راه بندازی. ثروتمندترین بازیکن HZI21 شو!
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#اقتصاد</span>
+                            <span class="text-xs bg-gold/10 text-gold px-3 py-1 rounded-full">#تجارت</span>
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#سرمایه‌گذاری</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- خبر ۵ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-gold/40 to-neon/40 flex items-center justify-center text-9xl">
+                            🏆
+                        </div>
+                        <span
+                            class="absolute top-4 right-4 bg-gold/90 text-dark px-4 py-1 rounded-full text-xs font-bold">
+                            رویداد
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۰۵</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-gold">
+                            مسابقات این هفته
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            این هفته پر از رویدادهای هیجان‌انگیزه! از مسابقات <span
+                                class="text-gold font-bold">PvP</span>
+                            گرفته تا رقابت‌های ساخت‌وساز و مینی‌گیم‌های تیمی.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            جوایز ویژه‌ای برای برندگان در نظر گرفته شده: پول درون‌بازی، آیتم‌های خاص و
+                            رنک VIP. پس آماده باش و قهرمان HZI21 شو!
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-gold/10 text-gold px-3 py-1 rounded-full">#رویداد</span>
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#PvP</span>
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#جوایز</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- خبر ۶ -->
+            <article class="bg-dark2 border border-white/10 rounded-3xl overflow-hidden card-glow">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative h-64 md:h-auto md:order-2">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-purple/40 to-gold/40 flex items-center justify-center text-9xl">
+                            🏙️
+                        </div>
+                        <span
+                            class="absolute top-4 right-4 bg-purple/90 text-white px-4 py-1 rounded-full text-xs font-bold">
+                            شهرسازی
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                        <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۳/۰۹/۰۱</span>
+                            <span>•</span>
+                            <span>👤 تیم HZI21</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black mb-4 text-purple">
+                            شهر خودت رو بساز
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            توی HZI21 می‌تونی زمین بخری، خونه بسازی، همسایه‌های جدید پیدا کنی و
+                            یه <span class="text-purple font-bold">شهر واقعی</span> رو با هم بسازید.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            شهردار انتخاب می‌کنید، قوانین می‌ذارید، جشنواره برگزار می‌کنید و شهرتون رو
+                            به یکی از بهترین شهرهای سرور تبدیل می‌کنید. خلاقیتت رو نشون بده!
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-purple/10 text-purple px-3 py-1 rounded-full">#شهرسازی</span>
+                            <span class="text-xs bg-neon/10 text-neon px-3 py-1 rounded-full">#خلاقیت</span>
+                            <span class="text-xs bg-gold/10 text-gold px-3 py-1 rounded-full">#همکاری</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="py-20 px-4">
+        <div
+            class="max-w-5xl mx-auto bg-gradient-to-r from-neon/10 to-purple/10 border border-neon/30 rounded-3xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4">
+                خبرای بیشتری می‌خوای؟ <span class="gradient-text">تلگرام</span> ما رو دنبال کن!
+            </h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                همه اطلاعیه‌ها، آپدیت‌ها و رویدادها رو اول توی کانال تلگرام منتشر می‌کنیم.
+            </p>
+            <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
+                class="inline-block bg-gradient-to-r from-neon to-purple px-8 py-3 rounded-lg font-bold btn-glow">
+                📱 عضویت در کانال تلگرام
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= فوتر ================= -->
+    <footer class="bg-dark2 border-t border-white/10 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="https://cdn.imgurl.ir/uploads/w81599_IMG_20260910_125826_298.jpg" alt="HZI21"
+                            class="h-12 w-12 rounded-lg object-cover border border-neon/30">
+                        <span class="font-black gradient-text text-xl">HZI21</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        بیشتر از یک سرور...<br>
+                        یه دنیای کامل برای ماینکرفت‌بازهای فارسی.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3 text-neon">لینک‌های سریع</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-neon transition">خانه</a></li>
+                        <li><a href="news.html" class="hover:text-neon transition">اخبار</a></li>
+                        <li><a href="trailers.html" class="hover:text-neon transition">تریلرها</a></li>
+                        <li><a href="blog.html" class="hover:text-neon transition">وبلاگ</a></li>
+                        <li><a href="shop.html" class="hover:text-neon transition">فروشگاه</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3 text-neon">ارتباط با ما</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>
+                            <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank" class="hover:text-neon transition">
+                                📱 کانال تلگرام
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/HZI21OfficialBOT" target="_blank" class="hover:text-neon transition">
+                                🤖 ربات تلگرام
+                            </a>
+                        </li>
+                        <li class="font-mono text-neon">HZI21.aternos.me</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3 text-neon">درباره سرور</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        HZI21 یه سرور ماینکرافت فارسی با اقتصاد واقعی، شهرسازی، هتل، استادیوم
+                        و رویدادهای هیجان‌انگیزه.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-6 text-center">
+                <center>
+                    <img src="https://cdn.imgurl.ir/uploads/x82376_logo2.png" alt="" style="width: 25%;">
+                </center>
+                <p class="text-gray-400 text-sm">
+                    ساخته شده با ❤️ توسط <span class="text-gold font-bold">Z.ROOYAL</span>
+                </p>
+                <p class="text-gray-500 text-xs mt-2">
+                    © 1405 HZI21 — تمامی حقوق این سایت متعلق به
+                    <span class="text-gold font-bold">Z.ROOYAL</span> است.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('open');
+            icon.textContent = menu.classList.contains('open') ? '✕' : '☰';
+        }
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+                document.getElementById('menuIcon').textContent = '☰';
+            });
+        });
+
+        document.querySelectorAll('section:nth-of-type(2) button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('section:nth-of-type(2) button').forEach(b => {
+                    b.className = 'bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition';
+                });
+                btn.className = 'bg-gradient-to-r from-neon to-purple px-5 py-2 rounded-full text-sm font-bold';
+            });
+        });
+    </script>
+
+</body>
+
+  </html>
