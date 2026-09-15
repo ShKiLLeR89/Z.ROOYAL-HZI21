@@ -100,6 +100,22 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .float {
+            animation: float 5s ease-in-out infinite;
+        }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -120,7 +136,7 @@
         }
 
         #mobileMenu.open {
-            max-height: 500px;
+            max-height: 600px;
         }
     </style>
 </head>
@@ -143,6 +159,7 @@
                 <a href="trailers.html" class="hover:text-neon transition">تریلرها</a>
                 <a href="blog.html" class="text-neon font-bold">وبلاگ</a>
                 <a href="shop.html" class="hover:text-neon transition">فروشگاه</a>
+                <a href="install.html" class="hover:text-neon transition">نصب</a>
             </nav>
 
             <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
@@ -162,6 +179,7 @@
                 <a href="trailers.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">🎬 تریلرها</a>
                 <a href="blog.html" class="py-2 px-3 rounded-lg bg-neon/10 text-neon font-bold">📝 وبلاگ</a>
                 <a href="shop.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">🛒 فروشگاه</a>
+                <a href="install.html" class="py-2 px-3 rounded-lg hover:bg-white/5 transition">📥 نصب ماینکرفت</a>
                 <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
                     class="mt-2 bg-gradient-to-r from-neon to-purple px-5 py-3 rounded-lg text-center font-bold btn-glow">
                     💬 ورود به تلگرام
@@ -186,6 +204,21 @@
             <p class="text-gray-400 text-lg max-w-2xl mx-auto">
                 مقالات آموزشی، راهنماها، ترفندها و همه چیز درباره ماینکرفت و سرور HZI21.
             </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-neon">۱۵+</div>
+                    <div class="text-sm text-gray-400">مقاله</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gold">۶</div>
+                    <div class="text-sm text-gray-400">دسته‌بندی</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple">هفتگی</div>
+                    <div class="text-sm text-gray-400">آپدیت</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -204,7 +237,7 @@
                     </div>
                     <div class="p-6 md:p-10 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
-                            <span>📅 ۱۴۰۳/۰۹/۱۵</span>
+                            <span>📅 ۱۴۰۵/۰۶/۲۴</span>
                             <span>•</span>
                             <span>⏱️ ۸ دقیقه مطالعه</span>
                             <span>•</span>
@@ -255,6 +288,9 @@
                 <button
                     class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">💰
                     اقتصاد</button>
+                <button
+                    class="bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition">🛡️
+                    امنیت</button>
             </div>
         </div>
     </section>
@@ -274,7 +310,7 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/11</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۱</span>
                             <span>•</span>
                             <span>⏱️ ۶ دقیقه</span>
                         </div>
@@ -282,8 +318,7 @@
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                             خیلی از بازیکن‌ها نمی‌دونن تفاوت اکانت کرکی و پریمیوم چیه و کدوم رو انتخاب کنن.
                             توی این مقاله کامل توضیح دادیم که هر کدوم چه مزایا و معایبی دارن و چطور
-                            می‌تونی بهترین انتخاب رو داشته باشی. از امنیت گرفته تا امکانات خاصی که
-                            هر اکانت داره.
+                            می‌تونی بهترین انتخاب رو داشته باشی.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -299,7 +334,7 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/12</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۲</span>
                             <span>•</span>
                             <span>⏱️ ۵ دقیقه</span>
                         </div>
@@ -307,8 +342,7 @@
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                             توی سیستم اقتصادی HZI21، راه‌های زیادی برای پول درآوردن هست. ولی بعضی
                             راه‌ها خیلی سریع‌ترن! توی این مقاله ۱۰ ترفند حرفه‌ای رو بهت یاد می‌دیم
-                            که با استفاده ازشون می‌تونی توی مدت کوتاهی ثروتت رو چند برابر کنی. از
-                            تجارت هوشمندانه تا سرمایه‌گذاری در بازار.
+                            که با استفاده ازشون می‌تونی ثروتت رو چند برابر کنی.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -324,16 +358,15 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/13</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۳</span>
                             <span>•</span>
                             <span>⏱️ ۷ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">راهنمای کامل PvP در HZI21</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                            PvP یکی از هیجان‌انگیزترین بخش‌های HZI21 هست. ولی برای اینکه توی
-                            مسابقات برنده بشی، باید یه سری تکنیک و استراتژی رو بلد باشی. توی این
-                            مقاله کامل، از انتخاب سلاح و زره مناسب گرفته تا تکنیک‌های حمله و دفاع،
-                            همه چیز رو بهت یاد می‌دیم.
+                            PvP یکی از هیجان‌انگیزترین بخش‌های HZI21 هست. توی این مقاله کامل،
+                            از انتخاب سلاح و زره مناسب گرفته تا تکنیک‌های حمله و دفاع، همه چیز
+                            رو بهت یاد می‌دیم.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -349,16 +382,14 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/14</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۴</span>
                             <span>•</span>
                             <span>⏱️ ۹ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">چگونه یه خانه رویایی بسازیم؟</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                             ساخت‌وساز توی ماینکرفت یه هنره. توی این مقاله، اصول طراحی، انتخاب
-                            متریال، ترکیب رنگ‌ها و چیدمان داخلی رو بهت یاد می‌دیم. با رعایت این
-                            نکات، می‌تونی یه خانه بسازی که همه بازیکن‌ها ازت تعریف کنن و
-                            بهت افتخار کنن.
+                            متریال، ترکیب رنگ‌ها و چیدمان داخلی رو بهت یاد می‌دیم.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -374,16 +405,14 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/15</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۵</span>
                             <span>•</span>
                             <span>⏱️ ۶ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">راهنمای کامل سیستم بانکی HZI21</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                             سیستم بانکی HZI21 یکی از پیشرفته‌ترین سیستم‌های ماینکرفت فارسیه. با
-                            استفاده از بانک می‌تونی پولت رو ذخیره کنی، وام بگیری، سرمایه‌گذاری کنی
-                            و سود بگیری. توی این مقاله همه امکانات بانک رو بهت معرفی می‌کنیم و
-                            یاد می‌دیم چطور ازشون بهترین استفاده رو ببری.
+                            استفاده از بانک می‌تونی پولت رو ذخیره کنی، وام بگیری و سرمایه‌گذاری کنی.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -399,16 +428,14 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/16</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۶</span>
                             <span>•</span>
                             <span>⏱️ ۴ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">همه چیز درباره رویدادهای هفتگی</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                            هر هفته توی HZI21 رویدادهای جدیدی برگزار می‌شه: از مسابقات PvP و
-                            ساخت‌وساز گرفته تا شکار گنج و مینی‌گیم‌ها. توی این مقاله، لیست کامل
-                            رویدادها، زمان برگزاری، جوایز و نحوه شرکت رو برات توضیح دادیم تا
-                            هیچ رویدادی رو از دست ندی.
+                            هر هفته توی HZI21 رویدادهای جدیدی برگزار می‌شه. توی این مقاله،
+                            لیست کامل رویدادها، زمان برگزاری، جوایز و نحوه شرکت رو برات توضیح دادیم.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -424,16 +451,14 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/17</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۷</span>
                             <span>•</span>
                             <span>⏱️ ۵ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">چگونه اکانتت رو امن نگه داری؟</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                             امنیت اکانت یکی از مهم‌ترین چیزاییه که هر بازیکن باید بهش توجه کنه.
-                            توی این مقاله، راه‌های محافظت از اکانت، انتخاب رمز قوی، فعال‌سازی
-                            تایید دو مرحله‌ای و جلوگیری از هک شدن رو بهت یاد می‌دیم. با رعایت
-                            این نکات، اکانتت همیشه امن می‌مونه.
+                            راه‌های محافظت، رمز قوی و جلوگیری از هک رو یاد می‌دیم.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -449,16 +474,14 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/18</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۸</span>
                             <span>•</span>
                             <span>⏱️ ۴ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">چگونه توی HZI21 دوست پیدا کنیم؟</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                            HZI21 فقط یه سرور نیست؛ یه جامعه بزرگه. توی این مقاله یاد می‌گیری
-                            چطور با بازیکن‌های دیگه ارتباط بگیری، تیم تشکیل بدی، توی رویدادها
-                            شرکت کنی و دوستان جدید پیدا کنی. با رعایت این نکات، به زودی
-                            بخشی از familly HZI21 می‌شی.
+                            HZI21 فقط یه سرور نیست؛ یه جامعه بزرگه. یاد می‌گیری چطور ارتباط
+                            بگیری، تیم تشکیل بدی و دوستان جدید پیدا کنی.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -474,16 +497,152 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                            <span>📅 1405/06/19</span>
+                            <span>📅 ۱۴۰۵/۰۶/۱۹</span>
                             <span>•</span>
                             <span>⏱️ ۷ دقیقه</span>
                         </div>
                         <h3 class="font-bold text-lg mb-3">راهنمای صعود در لیدربورد</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                            لیدربورد HZI21 جاییه که بهترین بازیکن‌ها اسمشون می‌درخشه. اگه
-                            می‌خوای جزو برترین‌ها باشی، باید یه سری نکات رو رعایت کنی. توی این
-                            مقاله، استراتژی‌های صعود در لیدربورد، کسب امتیاز بیشتر و
-                            حفظ رتبه رو بهت یاد می‌دیم.
+                            لیدربورد HZI21 جاییه که بهترین بازیکن‌ها اسمشون می‌درخشه. استراتژی‌های
+                            صعود، کسب امتیاز و حفظ رتبه رو یاد می‌دیم.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۰ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-neon/40 to-gold/40 flex items-center justify-center text-6xl">
+                        🎨
+                        <span
+                            class="absolute top-3 right-3 bg-neon/90 text-dark px-3 py-1 rounded-full text-xs font-bold">اسکین</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۰</span>
+                            <span>•</span>
+                            <span>⏱️ ۵ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">چگونه اسکین سفارشی بسازیم؟</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            می‌خوای یه اسکین منحصر به فرد داشته باشی؟ توی این مقاله یاد می‌گیری
+                            چطور با ابزارهای رایگان، اسکین سفارشی خودت رو بسازی.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۱ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-gold/40 to-purple/40 flex items-center justify-center text-6xl">
+                        🏨
+                        <span
+                            class="absolute top-3 right-3 bg-gold/90 text-dark px-3 py-1 rounded-full text-xs font-bold">هتل</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۱</span>
+                            <span>•</span>
+                            <span>⏱️ ۶ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">همه چیز درباره هتل HZI21</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            هتل HZI21 با اتاق‌های VIP، رستوران، استخر و سالن کنفرانس.
+                            امکانات کامل و نحوه رزرو رو توضیح دادیم.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۲ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-purple/40 to-gold/40 flex items-center justify-center text-6xl">
+                        ⚽
+                        <span
+                            class="absolute top-3 right-3 bg-purple/90 text-white px-3 py-1 rounded-full text-xs font-bold">استادیوم</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۲</span>
+                            <span>•</span>
+                            <span>⏱️ ۵ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">راهنمای مسابقات استادیوم</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            استادیوم HZI21 میزبان مسابقات مختلفه. قوانین، جوایز و نحوه
+                            شرکت در مسابقات رو کامل توضیح دادیم.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۳ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-neon/40 to-purple/40 flex items-center justify-center text-6xl">
+                        🚀
+                        <span
+                            class="absolute top-3 right-3 bg-neon/90 text-dark px-3 py-1 rounded-full text-xs font-bold">شروع</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۳</span>
+                            <span>•</span>
+                            <span>⏱️ ۴ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">اولین قدم‌ها در HZI21</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            تازه وارد شدی؟ این مقاله راهنمای اولین ساعات بازیه: ثبت‌نام،
+                            انتخاب شغل، خرید زمین و شروع ماجراجویی.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۴ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-gold/40 to-neon/40 flex items-center justify-center text-6xl">
+                        💎
+                        <span
+                            class="absolute top-3 right-3 bg-gold/90 text-dark px-3 py-1 rounded-full text-xs font-bold">اقتصاد</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۴</span>
+                            <span>•</span>
+                            <span>⏱️ ۶ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">راهنمای کامل Emerald</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            Emerald واحد پول HZI21 هست. راه‌های کسب، ذخیره و خرج کردنش
+                            رو کامل توضیح دادیم.
+                        </p>
+                        <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
+                    </div>
+                </article>
+
+                <!-- مقاله ۱۵ -->
+                <article class="bg-dark2 border border-white/10 rounded-2xl overflow-hidden card-glow flex flex-col">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-purple/40 to-neon/40 flex items-center justify-center text-6xl">
+                        🤖
+                        <span
+                            class="absolute top-3 right-3 bg-purple/90 text-white px-3 py-1 rounded-full text-xs font-bold">ربات</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                            <span>📅 ۱۴۰۵/۰۶/۲۴</span>
+                            <span>•</span>
+                            <span>⏱️ ۳ دقیقه</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">چگونه از ربات رسمی استفاده کنیم؟</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                            ربات رسمی HZI21 امکانات زیادی داره. توی این مقاله همه دستورات
+                            و قابلیت‌های ربات رو معرفی می‌کنیم.
                         </p>
                         <a href="#" class="text-neon text-sm hover:underline">ادامه مطلب ←</a>
                     </div>
@@ -497,7 +656,7 @@
     <section class="px-4 pb-20">
         <div
             class="max-w-4xl mx-auto bg-gradient-to-r from-neon/10 to-purple/10 border border-neon/30 rounded-3xl p-8 md:p-12 text-center">
-            <div class="text-5xl mb-4">📬</div>
+            <div class="text-5xl mb-4 float">📬</div>
             <h2 class="text-3xl md:text-4xl font-black mb-4">
                 عضو <span class="gradient-text">خبرنامه</span> ما شو!
             </h2>
@@ -536,18 +695,28 @@
     <footer class="bg-dark2 border-t border-white/10 py-12 px-4">
         <div class="max-w-7xl mx-auto">
 
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
 
-                <div>
+                <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
                         <img src="https://cdn.imgurl.ir/uploads/w81599_IMG_20260910_125826_298.jpg" alt="HZI21"
                             class="h-12 w-12 rounded-lg object-cover border border-neon/30">
                         <span class="font-black gradient-text text-xl">HZI21</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
                         بیشتر از یک سرور...<br>
                         یه دنیای کامل برای ماینکرفت‌بازهای فارسی.
                     </p>
+                    <div class="flex gap-3">
+                        <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank"
+                            class="w-10 h-10 bg-neon/10 border border-neon/30 rounded-lg flex items-center justify-center hover:bg-neon/20 transition">
+                            📱
+                        </a>
+                        <a href="https://t.me/HZI21OfficialBOT" target="_blank"
+                            class="w-10 h-10 bg-purple/10 border border-purple/30 rounded-lg flex items-center justify-center hover:bg-purple/20 transition">
+                            🤖
+                        </a>
+                    </div>
                 </div>
 
                 <div>
@@ -557,33 +726,26 @@
                         <li><a href="news.html" class="hover:text-neon transition">اخبار</a></li>
                         <li><a href="trailers.html" class="hover:text-neon transition">تریلرها</a></li>
                         <li><a href="blog.html" class="hover:text-neon transition">وبلاگ</a></li>
-                        <li><a href="shop.html" class="hover:text-neon transition">فروشگاه</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-3 text-neon">ارتباط با ما</h4>
+                    <h4 class="font-bold mb-3 text-neon">دسترسی سریع</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li>
-                            <a href="https://t.me/+lY9m2xSW6kg5MmRk" target="_blank" class="hover:text-neon transition">
-                                📱 کانال تلگرام
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/HZI21OfficialBOT" target="_blank" class="hover:text-neon transition">
-                                🤖 ربات تلگرام
-                            </a>
-                        </li>
-                        <li class="font-mono text-neon">HZI21.aternos.me</li>
+                        <li><a href="shop.html" class="hover:text-neon transition">فروشگاه</a></li>
+                        <li><a href="install.html" class="hover:text-neon transition">نصب ماینکرفت</a></li>
+                        <li><a href="#" class="hover:text-neon transition">قوانین</a></li>
+                        <li><a href="#" class="hover:text-neon transition">تماس با ما</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-3 text-neon">درباره سرور</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        HZI21 یه سرور ماینکرافت فارسی با اقتصاد واقعی، شهرسازی، هتل، استادیوم
-                        و رویدادهای هیجان‌انگیزه.
-                    </p>
+                    <h4 class="font-bold mb-3 text-neon">ارتباط</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="font-mono text-neon text-xs">HZI21.aternos.me</li>
+                        <li>📱 کانال تلگرام</li>
+                        <li>🤖 ربات رسمی</li>
+                    </ul>
                 </div>
 
             </div>
@@ -592,7 +754,7 @@
                 <center>
                     <img src="https://cdn.imgurl.ir/uploads/x82376_logo2.png" alt="" style="width: 25%;">
                 </center>
-                <p class="text-gray-400 text-sm">
+                <p class="text-gray-400 text-sm mt-4">
                     ساخته شده با ❤️ توسط <span class="text-gold font-bold">Z.ROOYAL</span>
                 </p>
                 <p class="text-gray-500 text-xs mt-2">
@@ -616,6 +778,15 @@
             link.addEventListener('click', () => {
                 document.getElementById('mobileMenu').classList.remove('open');
                 document.getElementById('menuIcon').textContent = '☰';
+            });
+        });
+
+        document.querySelectorAll('section:nth-of-type(3) button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('section:nth-of-type(3) button').forEach(b => {
+                    b.className = 'bg-dark2 border border-white/10 hover:border-neon/50 px-5 py-2 rounded-full text-sm transition';
+                });
+                btn.className = 'bg-gradient-to-r from-neon to-purple px-5 py-2 rounded-full text-sm font-bold';
             });
         });
 
@@ -645,4 +816,4 @@
 
 </body>
 
-  </html>
+</html>
